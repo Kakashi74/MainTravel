@@ -11,10 +11,18 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+         
+//        if let api_token = Helper.getApiToken() != nil {
+//         let Tap = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "main")
+//         window?.rootViewController = Tap
+//            
+//        }
+         
+        
         return true
     }
 
@@ -31,7 +39,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+   /*
+    func checkLogin(){
+        if Helper.isLoggedIn(){
+            let viewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            
+            let nav = UINavigationController(rootViewController: viewController)
+            self.window?.rootViewController = nav
+        }else{
+            let viewController = UIStoryboard.init(name: "Authentication", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            let nav = UINavigationController(rootViewController: viewController)
+            self.window?.rootViewController = nav
+        }
+    }
+*/
+    
 
 }
 
